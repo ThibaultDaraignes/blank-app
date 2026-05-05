@@ -1,9 +1,0 @@
-[global]
-[theme]
-theme.base="light"
-primaryColor="#F39C12"
-backgroundColor="#2E86C1"
-secondaryBackgroundColor="#AED6F1"
-textColor="#FFFFFF"
-font="monospace"
-baseFontSize = 27
