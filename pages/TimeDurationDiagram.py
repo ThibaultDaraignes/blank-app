@@ -33,7 +33,7 @@ def time_duration_visualization(S, hop_length_selection, start, duration, tick_s
 
     ####################### TIME-DURATION DIAGRAM + ENERGETIC PROFILE ######################
 
-    fig = plt.figure(figsize=(10, 6))
+    fig = plt.figure(figsize=(5, 2.5), dpi=120)
     gs = gridspec.GridSpec(1, 2, width_ratios=[5, 1], wspace=0.3)
 
     # ===================== MATRIX =====================
@@ -113,7 +113,7 @@ if audio_file:
 
     st.html(ipd.Audio(wave2, rate=sr)._repr_html_())
 
-    fig, ax = plt.subplots(figsize=(6, 3.5), dpi=120)
+    fig, ax = plt.subplots(figsize=(5, 2.5), dpi=120)
     librosa.display.waveshow(wave2, sr=sr, max_points=20000, axis='m')
     st.pyplot(fig, width='content')
 
@@ -126,7 +126,7 @@ if audio_file:
     window_selection = st.selectbox("window for FFT", ["blackmanharris","blackman","hann", "hamming"], index=3) #default = hamming
     Xfft = np.abs(librosa.stft(wave2, hop_length=hop_length_selection, window=window_selection))
     Xfft_db = librosa.amplitude_to_db(Xfft, ref=np.max)
-    fig, ax = plt.subplots(figsize=(6, 6))
+    fig, ax = plt.subplots(figsize=(5, 2.5), dpi=120)
     librosa.display.specshow(Xfft_db, sr=sr, x_axis="time", y_axis="log", cmap='grey')
     plt.colorbar(format='%+2.0f dB')
     st.pyplot(fig, width="content")
@@ -166,7 +166,7 @@ if audio_file:
     st.subheader("Energetic profile of your time-duration diagram")
 
     # display separately the energetic profile
-    fig, ax = plt.subplots(figsize=(6, 6))
+    fig, ax = plt.subplots(figsize=(5, 2.5), dpi=120)
     plt.plot(t, energy_per_line) #time on x-axis and energy on y-axis
     plt.xlabel("Time")
     plt.ylabel("Energy")
