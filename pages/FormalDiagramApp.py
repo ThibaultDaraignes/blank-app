@@ -17,6 +17,9 @@ import libfmp.c3
 import libfmp.c4
 import libfmp.c6
 
+plt.rcParams['figure.dpi'] = 150
+plt.rcParams['savefig.dpi'] = 150
+
 
 def compute_ssm_contrast(SSM, threshold_selection):
     Threshold = threshold_selection ### define a similarity threshold, default = 0.95
