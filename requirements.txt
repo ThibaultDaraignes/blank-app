@@ -1,1 +1,16 @@
 streamlit
+librosa
+numpy
+pandas
+soundfile
+datetime
+IPython.display
+tempfile
+matplotlib.pyplot
+matplotlib.patches
+libfmp.b
+libfmp.c2
+libfmp.c3
+libfmp.c4
+libfmp.c6
+matplotlib.gridspec
