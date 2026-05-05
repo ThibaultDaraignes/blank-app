@@ -17,8 +17,8 @@ import libfmp.c3
 import libfmp.c4
 import libfmp.c6
 
-plt.rcParams['figure.dpi'] = 150
-plt.rcParams['savefig.dpi'] = 150
+plt.rcParams['figure.dpi'] = 200
+plt.rcParams['savefig.dpi'] = 200
 
 
 def compute_ssm_contrast(SSM, threshold_selection):
@@ -202,7 +202,7 @@ if audio_file:
     #display waweform
     fig, ax = plt.subplots()
     librosa.display.waveshow(wave2, sr=sr, max_points=20000, axis='m')
-    st.pyplot(fig, width="content", use_container_width=True)
+    st.pyplot(fig, width="content")
 
     print(start, duration, end)
 
