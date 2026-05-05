@@ -17,8 +17,8 @@ import libfmp.c3
 import libfmp.c4
 import libfmp.c6
 
-plt.rcParams['figure.dpi'] = 200
-plt.rcParams['savefig.dpi'] = 200
+plt.rcParams['figure.dpi'] = 170
+plt.rcParams['savefig.dpi'] = 170
 
 
 def compute_ssm_contrast(SSM, threshold_selection):
