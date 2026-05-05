@@ -74,7 +74,7 @@ def display_ssm(matrix, hop_length, start, duration, tick_spacing_selection):
     #color map
     cmap = libfmp.b.compressed_gray_cmap(alpha=-500)
 
-    fig, ax = plt.subplots(figsize=(6, 6))  # Create figure and axes objects (square shape)
+    fig, ax = plt.subplots(figsize=(5, 2.5), dpi=100)  # Create figure and axes objects (square shape)
     im_matrix = ax.imshow(matrix, aspect='equal', origin='upper', cmap=cmap, extent=[times[0], times[-1], times[-1], times[0]]) # cmap parameter as defined above
     # with the extent parameter, we map the matrix coordinates to real time in sec when displaying the image, for coordinates (x,y) (with y from the top)
 
@@ -128,7 +128,7 @@ def display_formal_diagram(diagram, hop_length_selection, start, duration, tick_
     #color map
     cmap = libfmp.b.compressed_gray_cmap(alpha=-500)
 
-    fig, ax = plt.subplots()  # Create figure and axes objects (square shape)
+    fig, ax = plt.subplots(figsize=(5, 2.5), dpi=100)  # Create figure and axes objects (square shape)
     im_diagram = ax.imshow(m_reshape(diagram), aspect=0.3, origin='upper', cmap=cmap, extent=[times[0], times[-1], m_reshape(diagram).shape[0]-1, 0]) # cmap parameter as defined above
     # with the extent parameter, we map the matrix coordinates to real time in sec when displaying the image, for coordinates (x,y) (with y from the top)
     # in the case of the formal diagram, we keep the (m_reshape(FormalDiagram).shape[0]-1) number of lines in our plot
@@ -200,7 +200,7 @@ if audio_file:
     st.html(ipd.Audio(wave2, rate=sr)._repr_html_())
 
     #display waweform
-    fig, ax = plt.subplots()
+    fig, ax = plt.subplots(figsize=(5, 2.5), dpi=100)
     librosa.display.waveshow(wave2, sr=sr, max_points=20000, axis='m')
     st.pyplot(fig, width="content")
 
@@ -213,7 +213,7 @@ if audio_file:
     window_selection = st.selectbox("window for FFT", ["blackmanharris","blackman","hann", "hamming"], index=3) #default = hamming
     Xfft = np.abs(librosa.stft(wave2, hop_length=hop_length_selection, window=window_selection))
     Xfft_db = librosa.amplitude_to_db(Xfft, ref=np.max)
-    fig, ax = plt.subplots()
+    fig, ax = plt.subplots(figsize=(5, 2.5), dpi=100)
     librosa.display.specshow(Xfft_db, sr=sr, x_axis="time", y_axis="log", cmap='grey')
     plt.colorbar(format='%+2.0f dB')
     st.pyplot(fig, width="content")
