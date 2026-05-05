@@ -18,8 +18,6 @@ import libfmp.c3
 import libfmp.c4
 import libfmp.c6
 
-plt.rcParams['figure.dpi'] = 170
-plt.rcParams['savefig.dpi'] = 170
 
 
 def time_duration_visualization(S, hop_length_selection, start, duration, tick_spacing_selection):
@@ -115,7 +113,7 @@ if audio_file:
 
     st.html(ipd.Audio(wave2, rate=sr)._repr_html_())
 
-    fig, ax = plt.subplots(figsize=(6, 6))
+    fig, ax = plt.subplots(figsize=(6, 3.5), dpi=120)
     librosa.display.waveshow(wave2, sr=sr, max_points=20000, axis='m')
     st.pyplot(fig, width='content')
 
