@@ -23,7 +23,7 @@ def compute_ssm_contrast(SSM, threshold_selection):
     n_materials = SSM.shape[1]
     S_contrast = np.zeros((n_materials, n_materials))
     for i in range(n_materials):
-        for j in range(n_materials):
+        for j in range(i, n_materials):
             if i > j:
                 S_contrast[i,j] = 0
             else:
@@ -222,7 +222,7 @@ if audio_file:
     n_frames = Xfft.shape[1] ### frame ==> event
     S = np.zeros((n_frames, n_frames))
     for i in range(n_frames):
-        for j in range(n_frames):
+        for j in range(i, n_frames):
             S[i, j] = np.dot(Xfft[:, i].T, Xfft[:, j])
 
     # Ensure values are in proper range [0, 1] for similarity, with a percentil-based normalization 
