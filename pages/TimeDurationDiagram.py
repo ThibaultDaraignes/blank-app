@@ -33,7 +33,7 @@ def time_duration_visualization(S, hop_length_selection, start, duration, tick_s
 
     ####################### TIME-DURATION DIAGRAM + ENERGETIC PROFILE ######################
 
-    fig = plt.figure(figsize=(5, 2.5), dpi=100)
+    fig = plt.figure(figsize=(5, 2.5), dpi=120)
     gs = gridspec.GridSpec(1, 2, width_ratios=[5, 1], wspace=0.3)
 
     # ===================== MATRIX =====================
