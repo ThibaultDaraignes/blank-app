@@ -199,7 +199,7 @@ if audio_file:
     #display waweform
     fig, ax = plt.subplots()
     librosa.display.waveshow(wave2, sr=sr, max_points=20000, axis='m')
-    st.pyplot(fig, width=600*200)
+    st.pyplot(fig, width=400*100)
 
     print(start, duration, end)
 
