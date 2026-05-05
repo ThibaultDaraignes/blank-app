@@ -197,9 +197,9 @@ if audio_file:
     st.html(ipd.Audio(wave2, rate=sr)._repr_html_())
 
     #display waweform
-    fig, ax = plt.subplots(figsize=(6, 6))
+    fig, ax = plt.subplots()
     librosa.display.waveshow(wave2, sr=sr, max_points=20000, axis='m')
-    st.pyplot(fig, width="content")
+    st.pyplot(fig, width=15)
 
     print(start, duration, end)
 
