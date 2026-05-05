@@ -128,7 +128,7 @@ def display_formal_diagram(diagram, hop_length_selection, start, duration, tick_
     #color map
     cmap = libfmp.b.compressed_gray_cmap(alpha=-500)
 
-    fig, ax = plt.subplots(figsize=(5, 3.5), dpi=120)  # Create figure and axes objects (square shape)
+    fig, ax = plt.subplots(figsize=(5, 4.5), dpi=120)  # Create figure and axes objects (square shape)
     im_diagram = ax.imshow(m_reshape(diagram), aspect=0.3, origin='upper', cmap=cmap, extent=[times[0], times[-1], m_reshape(diagram).shape[0]-1, 0]) # cmap parameter as defined above
     # with the extent parameter, we map the matrix coordinates to real time in sec when displaying the image, for coordinates (x,y) (with y from the top)
     # in the case of the formal diagram, we keep the (m_reshape(FormalDiagram).shape[0]-1) number of lines in our plot
