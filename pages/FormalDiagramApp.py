@@ -155,7 +155,7 @@ def display_formal_diagram(diagram, hop_length_selection, start, duration, tick_
     ax.grid(False, axis='x')
     ax.grid(False, axis='y')
 
-    return st.pyplot(fig, width=15)
+    return st.pyplot(fig, width="content")
 
 
 
@@ -199,7 +199,7 @@ if audio_file:
     #display waweform
     fig, ax = plt.subplots()
     librosa.display.waveshow(wave2, sr=sr, max_points=20000, axis='m')
-    st.pyplot(fig, width=15)
+    st.pyplot(fig, width="content")
 
     print(start, duration, end)
 
