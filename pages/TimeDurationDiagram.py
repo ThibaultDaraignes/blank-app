@@ -137,7 +137,7 @@ if audio_file:
     n_frames = Xfft.shape[1] ### frame ==> event 
     S = np.zeros((n_frames, n_frames))
     for i in range(n_frames):
-        for j in range(n_frames):
+        for j in range(i, n_frames):
             if j >= i:
                 S[i, j] = np.dot((Xfft[:, j]), Xfft[:, j-i])
             else:
