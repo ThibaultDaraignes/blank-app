@@ -14,6 +14,6 @@ Protoype for MusiScale research project : formal diagram and time-duration diagr
    $ streamlit run MusiScaleApp.py
    ```
 
-3. In the page folder, you'll find 3 python files. You have to keep them in this folder.
+3. In the pages folder, you'll find 3 python files. You have to keep them in this folder.
 
 4. You'll also find a file called config.toml : this a configuration file for the theme of the streamlit application. This file has to be in the same folder that the main application.
