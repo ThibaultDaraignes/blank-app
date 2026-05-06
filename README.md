@@ -1,4 +1,4 @@
-Protoype for MusiScale research project : formal diagram and time-duration diagram from self-similarity matrix
+Protoype for MusiScale research project, funded by the french National Research Agency : this program allows you to compute and plot a formal diagram and a time-duration diagram from a self-similarity matrix using concordance similairty measure.
 
 ### How to run it on your own machine
 
@@ -14,6 +14,4 @@ Protoype for MusiScale research project : formal diagram and time-duration diagr
    $ streamlit run MusiScaleApp.py
    ```
 
-3. In the pages folder, you'll find 3 python files. You have to keep them in this folder.
-
-4. You'll also find a file called config.toml : this a configuration file for the theme of the streamlit application. This file has to be in the present folder.
+Note that in the pages folder, you'll find 3 python files. You have to keep them in this folder. You'll also find a file called config.toml : this a configuration file for the theme of the streamlit application. This file has to remain in the present folder.
