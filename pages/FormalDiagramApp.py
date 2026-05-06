@@ -236,7 +236,7 @@ if audio_file:
 
     # display the matrix
     tick_spacing_selection = st.selectbox("Select a tick spacing (in sec) for the display of the self-similarity matrix", 
-                                          [1, 2, 3, 4, 5, 10, 15, 20, 30, 50, 60], index=0)
+                                          [1, 2, 3, 4, 5, 10, 15, 20, 30, 50, 60], index=4)
     display_ssm(S, hop_length_selection, start, duration, tick_spacing_selection)
 
     
