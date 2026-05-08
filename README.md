@@ -1,4 +1,4 @@
-Protoype for MusiScale research project, funded by the french National Research Agency : this program allows you to compute and plot a formal diagram and a time-duration diagram from a self-similarity matrix using concordance similairty measure.
+Protoype for MusiScale research project, funded by the french National Research Agency : this program allows you to compute and plot a formal diagram and a time-duration diagram from a self-similarity matrix using concordance similarity measure.
 
 ### How to run it on your own machine
 
